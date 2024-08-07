@@ -22,10 +22,6 @@
  * @copyright [Addingwell]
  * @license   http://www.gnu.org/licenses/gpl-3.0.html GNU General Public License (GPL 3.0)
  **/
-
-namespace mastercookie;
-use Module;
-
 if (!defined('_PS_VERSION_')) {
     exit;
 }
@@ -67,7 +63,7 @@ class MasterCookie extends Module
     {
         $cookieName = '_aw_master_id';
         $cookieLifetime = time() + (60 * 60 * 24 * 30 * 13);
-        if ($_SERVER['SERVER_NAME'] === 'localhost') {
+        if($_SERVER['SERVER_NAME'] === 'localhost') {
             $cookieDomain = 'localhost';
         } else {
             $cookieDomain = $this->getMainDomain($_SERVER['HTTP_HOST']);
@@ -128,10 +124,10 @@ class MasterCookie extends Module
             $possibleTld = implode('.', array_slice($parts, $i));
 
             if (in_array($possibleTld, $composedTlds)) {
-                return '.' . implode('.', array_slice($parts, $i - 1));
+                return '.'.implode('.', array_slice($parts, $i - 1));
             }
         }
         // Default to last two parts if no composed TLD matches
-        return '.' . implode('.', array_slice($parts, -2));
+        return '.'.implode('.', array_slice($parts, -2));
     }
 }
