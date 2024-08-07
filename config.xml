@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>mastercookie</name>
+    <displayName><![CDATA[Master Cookie]]></displayName>
+    <version><![CDATA[1.0.0]]></version>
+    <description><![CDATA[This module create a master uuid cookie from your server for each visitor during 13 months. The name of this cookie is &quot;_aw_master_id&quot;]]></description>
+    <author><![CDATA[Addingwell]]></author>
+    <tab><![CDATA[administration]]></tab>
+    <is_configurable>0</is_configurable>
+    <need_instance>0</need_instance>
+</module>
