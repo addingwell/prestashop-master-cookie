@@ -16,3 +16,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Bearer
         uses: bearer/bearer-action@v2
+        # Uncomment to get results for critical and high vulnerabilies only
+        # with:
+        #   severity: "critical,high"
+

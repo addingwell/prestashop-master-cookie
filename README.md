@@ -6,7 +6,7 @@ A Prestashop module for adding the aw_master_id visitor cookie to your site
 
 ### Bearer
 
-To ensure the security of AddingWell’s codebase, this repository uses Bearer to scan and detect vulnerabilities in code. Bearer is an open-source static analysis tool, improving the overall security of the development lifecycle.
+To ensure the security of AddingWell’s codebase, this repository uses [Bearer](https://www.bearer.com/bearer-cli) to scan and detect vulnerabilities in code. Bearer is an open-source static analysis tool, improving the overall security of the development lifecycle.
 
 ### Add exception
 
