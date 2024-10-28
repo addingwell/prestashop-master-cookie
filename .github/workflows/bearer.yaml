@@ -16,7 +16,11 @@ jobs:
       - uses: actions/checkout@v4
       - name: Bearer
         uses: bearer/bearer-action@v2
-        # Uncomment to get results for critical and high vulnerabilies only
-        # with:
-        #   severity: "critical,high"
-
+        with:
+          severity: "critical,high,medium,low"
+      # A "warning" severity vulnerability does not cause the pipeline to fail.
+      - name: Bearer
+        uses: bearer/bearer-action@v2
+        with:
+          severity: "warning"
+          exit-code: 0
