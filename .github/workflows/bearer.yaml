@@ -1,0 +1,26 @@
+name: Bearer
+
+on:
+  pull_request: 
+  push:
+    branches:
+      - master
+
+permissions:
+  contents: read
+
+jobs:
+  rule_check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Bearer
+        uses: bearer/bearer-action@v2
+        with:
+          severity: "critical,high,medium,low"
+      # A "warning" severity vulnerability does not cause the pipeline to fail.
+      - name: Bearer
+        uses: bearer/bearer-action@v2
+        with:
+          severity: "warning"
+          exit-code: 0
